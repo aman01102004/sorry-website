@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Message From Me</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #e5e7eb;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .container {
+      max-width: 700px;
+      padding: 40px 30px;
+      text-align: center;
+      animation: fadeIn 1.5s ease;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.3rem;
+      margin-bottom: 25px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    p {
+      font-size: 1.05rem;
+      line-height: 1.9;
+      opacity: 0.9;
+    }
+
+    .btn {
+      margin-top: 40px;
+      padding: 12px 26px;
+      border-radius: 30px;
+      border: 1px solid #e5e7eb;
+      background: transparent;
+      color: #e5e7eb;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #e5e7eb;
+      color: #0f172a;
+      transform: scale(1.05);
+    }
+
+    .hidden {
+      display: none;
+      margin-top: 30px;
+      font-size: 1.05rem;
+      color: #cbd5f5;
+      line-height: 1.9;
+      animation: fadeIn 1s ease;
+    }
+
+    .signature {
+      margin-top: 35px;
+      font-style: italic;
+      opacity: 0.7;
+      font-size: 0.95rem;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 25px 18px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>I Owe You an Apology</h1>
+
+    <p>
+      I’ve taken time to reflect, and I want to say this honestly — I was wrong.<br><br>
+
+      I didn’t handle things the way I should have, and I understand that my actions hurt you.
+      There’s no justification for that, and I take full responsibility.<br><br>
+
+      I’m not writing this to change your mind or ask for anything.
+      I just believe you deserved a sincere and respectful apology.<br><br>
+
+      What we had meant something to me, and I regret not valuing it the way I should have when it mattered.
+    </p>
+
+    <button class="btn" onclick="showMessage()">Read More</button>
+
+    <div id="message" class="hidden">
+      I’m working on myself — quietly and consistently.<br><br>
+
+      Not to prove anything, but because I understand where I went wrong.<br><br>
+
+      Whether or not we ever speak again, I genuinely wish you peace, happiness, and everything good in life.<br><br>
+
+      I’m truly sorry.
+    </div>
+
+    <div class="signature">
+      — From someone who learned the hard way
+    </div>
+  </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById("message").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
